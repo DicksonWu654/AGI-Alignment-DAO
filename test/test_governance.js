@@ -115,8 +115,5 @@ describe("AGIAlignmentDAO", function () {
         await expect(agiAlignmentDAO.vote(ethers.BigNumber.from(0), true)).to.be.revertedWith("Already voted.");
     }
     );
-
-
-
 }
 );

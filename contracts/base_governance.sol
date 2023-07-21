@@ -28,10 +28,8 @@ contract AGIAlignmentDAO {
         agreementThreshold = _agreementThreshold;
     }
 
-    function verifyHuman(address _human) external {
-        // TODO: Integrate with Worldcoin's verification
-        // require(msg.sender == admin, "Only admin can verify humans.");
-        isHuman[_human] = true;
+    function verifyHuman() external virtual {
+        isHuman[msg.sender] = true;
     }
 
     function changeThresholds(
