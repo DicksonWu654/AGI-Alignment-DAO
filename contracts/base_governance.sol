@@ -3,7 +3,7 @@ pragma solidity >=0.8.0 <0.9.0;
 contract AGIAlignmentDAO {
     address public admin; //Admin for now because I need it for the demo lol - but in the future it'll be the dao that sets the threshold
     uint public proposalThreshold;
-    uint public agreementThreshold;
+    uint public agreementThreshold; //it's a percentage
 
     enum VoteType {
         ADD,
