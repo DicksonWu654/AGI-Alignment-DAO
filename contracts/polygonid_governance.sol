@@ -6,9 +6,12 @@ import "./polygon_id_utils/interfaces/ICircuitValidator.sol";
 import "./polygon_id_utils/verifiers/ZKPVerifier.sol";
 
 contract AGIAlignmentDAOPolygonID is AGIAlignmentDAO, ZKPVerifier {
+    mapping(uint256 => address) public idToAddress;
+    mapping(address => uint256) public addressToId;
+
     constructor(
         uint _proposalThreshold,
-        uint _agreementThreshold,
+        uint _agreementThreshold
     ) AGIAlignmentDAO(_proposalThreshold, _agreementThreshold) {}
 
     function _beforeProofSubmit(
