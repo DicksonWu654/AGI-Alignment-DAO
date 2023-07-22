@@ -59,12 +59,9 @@ contract ZKPVerifier is IZKPVerifier, Ownable {
     /**
      * @dev getZKPRequest
      */
-    function getZKPRequest(uint64 requestId)
-        external
-        view
-        override
-        returns (ICircuitValidator.CircuitQuery memory)
-    {
+    function getZKPRequest(
+        uint64 requestId
+    ) external view override returns (ICircuitValidator.CircuitQuery memory) {
         return requestQueries[requestId];
     }
 

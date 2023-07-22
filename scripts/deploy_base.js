@@ -3,7 +3,7 @@ const { ethers } = require("hardhat");
 async function main() {
     const base_governance = await ethers.getContractFactory("AGIAlignmentDAO");
     const Governance = await base_governance.deploy(1, 50);
-
+    await Governance.deployed();
     console.log("AGIAlignmentDAO Base Contract deployed to:", Governance.address);
 }
 

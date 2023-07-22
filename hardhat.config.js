@@ -1,5 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require('dotenv').config()
+require("@matterlabs/hardhat-zksync-solc");
+
 
 const POLYGON_ZK_EVM_TESTNET_RPC_ENDPOINT = process.env.POLYGON_ZK_EVM_TESTNET_RPC_ENDPOINT
 const POLYGON_MUMBIA_RPC_ENDPOINT = process.env.POLYGON_MUMBIA_RPC_ENDPOINT
@@ -26,11 +28,30 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
+  zksolc: {
+    version: "latest", // optional.
+    settings: {
+      compilerPath: "/Users/dicksonwu/Documents/GitHub/AGI-Alignment-DAO/zksolc-macosx-arm64-v1.3.13",  // optional. Ignored for compilerSource "docker". Can be used if compiler is located in a specific folder
+      libraries: {}, // optional. References to non-inlinable libraries
+      isSystem: false, // optional.  Enables Yul instructions available only for zkSync system contracts and libraries
+      forceEvmla: false, // optional. Falls back to EVM legacy assembly if there is a bug with Yul
+      optimizer: {
+        enabled: true, // optional. True by default
+        mode: '3' // optional. 3 by default, z to optimize bytecode size
+      },
+      experimental: {
+        dockerImage: '', // deprecated
+        tag: ''   // deprecated
+      },
+    }
+  },
+
   solidity: {
-    version: "0.8.19",
+    version: "0.8.15",
     settings: {
       optimizer: {
         enabled: false,
+        // runs: 200,
       },
     },
   },
@@ -44,8 +65,8 @@ module.exports = {
       url: `${POLYGON_MUMBIA_RPC_ENDPOINT}`,
       accounts: [`0x${PRIVATE_KEY}`],
       chainId: 80001,
-      // gasPrice: 10000000000,
-      gasMultiplier: 100,
+      // gasPrice: 15000000000,
+      gasMultiplier: 10,
       // gas: 2000000,
     },
     gnosis_chiado: {
@@ -63,6 +84,8 @@ module.exports = {
       url: `${ZKSYNC_RPC_ENDPOINT}`,
       accounts: [`0x${PRIVATE_KEY}`],
       chainId: 280,
+      ethNetwork: "goerli",
+      zksync: true
     },
     celo_alfajores: {
       url: `${CELO_RPC_ENDPOINT}`,
@@ -74,7 +97,7 @@ module.exports = {
       accounts: [`0x${PRIVATE_KEY}`],
       chainId: 5001,
     },
-    zetachain_athens2: {
+    zetachain_athens3: {
       url: `${ZETACHAIN_RPC_ENDPOINT}`,
       accounts: [`0x${PRIVATE_KEY}`],
       chainId: 7001,
@@ -94,7 +117,7 @@ module.exports = {
       zksync_testnet: `${ZKSYNC_ETHERSCAN_API_KEY}`,
       celo_alfajores: `${CELO_ETHERSCAN_API_KEY}`,
       mantle_testnet: `${MANTLE_ETHERSCAN_API_KEY}`,
-      zetachain_athens2: `${ZETACHAIN_ETHERSCAN_API_KEY}`,
+      zetachain_athens3: `${ZETACHAIN_ETHERSCAN_API_KEY}`,
       neonevm_devnet: `${NEONEVM_ETHERSCAN_API_KEY}`,
     },
     customChains: [
@@ -119,6 +142,7 @@ module.exports = {
         chainId: 10200,
         urls: {
           apiURL: "https://blockscout.com/gnosis/chiado/api",
+          browserURL: "https://blockscout.com/gnosis/chiado"
         }
       },
       {
@@ -126,6 +150,7 @@ module.exports = {
         chainId: 59140,
         urls: {
           apiURL: "https://api-testnet.lineascan.build/api",
+          browserURL: "https://lineascan.build"
         }
       },
       {
@@ -139,7 +164,7 @@ module.exports = {
         network: "celo_alfajores",
         chainId: 44787,
         urls: {
-          apiURL: "https://alfajores-blockscout.celo-testnet.org/api",
+          apiURL: "https://api-alfajores.celoscan.io/api",
         }
       },
       {
@@ -150,7 +175,7 @@ module.exports = {
         }
       },
       {
-        network: "zetachain_athens2",
+        network: "zetachain_athens3",
         chainId: 7001,
         urls: {
           apiURL: "https://api-testnet.zetachain.io/api",
