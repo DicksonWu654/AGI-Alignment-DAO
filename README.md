@@ -11,3 +11,7 @@ ETHParis 2023
 # Zetachain: https://athens3.explorer.zetachain.com/address/0xB5c4AA3544FBfA8870a7B8Fb711Cc4b9B50c7dbA?tab=code
 # NeonEVM: https://devnet.neonscan.org/address/0xbC9a9e84393AfF7e6f6B28fB1740859d3C30c95B#contract
 # ZKSYNC: https://goerli.explorer.zksync.io/address/0x168b925bbe77362021b44746E813b21BF91f71b3#contract
+
+# Worldcoin: https://mumbai.polygonscan.com/address/0xC3F07989C10ae9d1a7D847fAbE4B94a66510b89E#code
+# PolygonID: https://mumbai.polygonscan.com/address/0x0CE00904629C7e8D5D871885fc9684F451e8613C#code
+

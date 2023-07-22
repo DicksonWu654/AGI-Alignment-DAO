@@ -1,0 +1,49 @@
+{
+    "chainId": {
+        "10200": {
+            "name": "xDai",
+            "short_name": "gnosis",
+            "address": "0x9E8A6c09F274d6C66e42788a9964200717B54724"
+        },
+        "1442": {
+            "name": "PolygonZKEVM",
+            "short_name": "matic",
+            "address": "0x90e828d799d5772CBaCf0aA340a064c6F4ee364b"
+        },
+        "80001": {
+            "name": "Mumbai",
+            "short_name": "mumbai",
+            "address": "0x76Ae665579968fFf75222B11C27a3AeF85FD5477"
+        },
+        "59140": {
+            "name": "Linea",
+            "short_name": "linea",
+            "address": "0x9E8A6c09F274d6C66e42788a9964200717B54724"
+        },
+        "44787": {
+            "name": "Celo",
+            "short_name": "celo",
+            "address": "0x88C5b06D3E054d6e530E7ec57DFD249D9B0f7dfc"
+        },
+        "5001": {
+            "name": "Mantle",
+            "short_name": "mantle",
+            "address": "0xbe78E9f9b57238Ff8d424bb01b8508d37727b92C"
+        },
+        "7001": {
+            "name": "Zetachain",
+            "short_name": "zeta",
+            "address": "0xB5c4AA3544FBfA8870a7B8Fb711Cc4b9B50c7dbA"
+        },
+        "245022926": {
+            "name": "NeonEVM",
+            "short_name": "neonEVM",
+            "address": "0xbC9a9e84393AfF7e6f6B28fB1740859d3C30c95B"
+        },
+        "280": {
+            "name": "ZKSYNC",
+            "short_name": "zksync",
+            "address": "0x168b925bbe77362021b44746E813b21BF91f71b3"
+        }
+    }
+}
