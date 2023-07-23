@@ -104,6 +104,9 @@ export const Navbar = () => {
         </Link>
       </HStack>
       <HStack gap={4}>
+        <Button bg="transparent" onClick={onSuccess}>
+
+        </Button>
         {address ? (
           <>
             {hasWorldIDVerified ? (
@@ -115,6 +118,7 @@ export const Navbar = () => {
                 onSuccess={onSuccess} // callback when the modal is closed
                 handleVerify={handleVerify} // optional callback when the proof is received
                 enableTelemetry // optional, defaults to false
+
               >
                 {({ open }) => (
                   <Button variant={"unstyled"} onClick={open}>
