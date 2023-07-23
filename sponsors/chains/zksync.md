@@ -1,0 +1,3 @@
+Deployment Address: 0x168b925bbe77362021b44746E813b21BF91f71b3
+
+Verified Explorer Contract Link:https://goerli.explorer.zksync.io/address/0x168b925bbe77362021b44746E813b21BF91f71b3#contract

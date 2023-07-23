@@ -1,17 +1,19 @@
 # AGI-Alignment-DAO
 ETHParis 2023
 
+# Description
+AGI Alignment DAO is aims to address the profound risks and opportunities presented by Artificial General Intelligence (AGI)
 
-# Gnosis: https://gnosis-chiado.blockscout.com/address/0x9E8A6c09F274d6C66e42788a9964200717B54724?tab=contract
-# PolygonZKEVM: https://testnet-zkevm.polygonscan.com/address/0x90e828d799d5772CBaCf0aA340a064c6F4ee364b#code
-# PolygonMumbia: https://mumbai.polygonscan.com/address/0x76Ae665579968fFf75222B11C27a3AeF85FD5477#code
-# Linea: https://goerli.lineascan.build/address/0x9E8A6c09F274d6C66e42788a9964200717B54724#code
-# Celo: https://alfajores.celoscan.io/address/0x88C5b06D3E054d6e530E7ec57DFD249D9B0f7dfc#code
-# Mantle: https://explorer.testnet.mantle.xyz/address/0xbe78E9f9b57238Ff8d424bb01b8508d37727b92C/contracts#address-tabs
-# Zetachain: https://athens3.explorer.zetachain.com/address/0xB5c4AA3544FBfA8870a7B8Fb711Cc4b9B50c7dbA?tab=code
-# NeonEVM: https://devnet.neonscan.org/address/0xbC9a9e84393AfF7e6f6B28fB1740859d3C30c95B#contract
-# ZKSYNC: https://goerli.explorer.zksync.io/address/0x168b925bbe77362021b44746E813b21BF91f71b3#contract
+With AGI becoming a reality within the foreseeable future, the potential for both utopian and dystopian outcomes becomes increasingly critical. The current centralized governance model is insufficient to tackle the global implications of AGI, necessitating a decentralized and democratic approach.
 
-# Worldcoin: https://mumbai.polygonscan.com/address/0xC3F07989C10ae9d1a7D847fAbE4B94a66510b89E#code
-# PolygonID: https://mumbai.polygonscan.com/address/0x0CE00904629C7e8D5D871885fc9684F451e8613C#code
+AGI Alignment DAO proposes a novel solution by integrating Constitutional AI and employing a DAO governed by humanity.
 
+We leverage the advancements that crypto has made in the last decade to achieve this! Through identity verification (WorldcoinID), DAO governance, MACI Quadratic Voting, L1's and L2s, the project ensures that AGI's development adheres to a constitution collectively determined by all of humanity.
+
+This approach empowers individuals to actively participate in steering AGI's course, promoting collaboration, inclusivity, and ethical considerations, while mitigating existential risks and maximizing AGI's potential for the benefit of humankind.
+
+# How it's made:
+This project uses Hardhat to develop and test the smart contracts. There's a base governance contract, which is inherited by the worldcoin and polygonid contracts (which are used in the verify human function to prevent sybil attacks). I deployed on a variety of chains which are known for their cheap gas - allowing everyone to have access to vote on the constitution of humanity). I also used react to build the frontend and Vercel to deploy for anyone to use!
+
+# Sponsors:
+Please refer to `./sponsors` for sponsors. I split it amongst identity and chain sponsors :)
